@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Here is the list of manga I'm interested</h2>
+<ul>
+    {% for item in manga %}
+    <li>
+        Name: {{item.name}}, Chapter {{item.chapter}} 
+    </li>
+    {% endfor %}
+</ul>
+
+<p>To add new entry to the list click <a href="{% url 'manga-new' %}">here</a></p>
+
+{% endblock content %}

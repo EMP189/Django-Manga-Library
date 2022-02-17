@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Library</title>
+    </head>
+    <body>
+        <nav>
+            <a href="{% url 'manga-index'%}">Home</a>
+            <a href="{% url 'manga-about' %}">About</a>
+        </nav>
+        <main>
+            {% block content %}{% endblock content %}
+        </main>
+    </body>
+</html>
