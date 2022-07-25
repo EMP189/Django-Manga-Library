@@ -5,7 +5,7 @@ from .forms import AddMangaForm
 # Create your views here.
 
 def index(req):
-    # NOTE_TO_SELF: no need to make the templates be inside another folder inside templates
+    # NOTE_TO_SELF: no need to make the templates be nested inside a folder in templates
     return render(req, 'index.html')
 
 def about(req):
