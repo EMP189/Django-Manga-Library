@@ -10,6 +10,7 @@ def index(req):
 
 def about(req):
     return render(req, 'about.html')
+
 def show(req):
     data={'manga':Manga.objects.all()}
     return render(req, 'show.html', data)
@@ -21,7 +22,7 @@ def createManga(req):
             manga.save()
             manga_name = manga.cleaned_data.get('name')
             messages.success(req, f'{manga_name} has been added succesfully')
-            return redirect('manga-index')
+            return redirect('manga-show')
     else:
         form = AddMangaForm()
     data = {'form': form}

@@ -5,7 +5,7 @@
 <ul>
     {% for item in manga %}
     <li>
-        Name: {{item.name}}, Chapter {{item.chapter}}, Reading Status: {{item.read_status}}
+       Name: {{item.name}}, Chapter {{item.chapter}}, Reading Status: {{item.get_read_status_display}}
     </li>
     {% endfor %}
 </ul>
